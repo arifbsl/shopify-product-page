@@ -243,6 +243,8 @@ body {
   position: absolute;
   left: 40px;
   bottom: 30px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .routine__wrapper .product__card .product__text .title {
@@ -254,6 +256,10 @@ body {
 .routine__wrapper .product__card .product__text .price {
   color: #D3BC0C;
   font-size: 15px;
+}
+
+.routine__wrapper .product__card:hover .product__text {
+  bottom: 70px;
 }
 
 .routine .calc {

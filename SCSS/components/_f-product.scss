@@ -43,6 +43,7 @@
                 position: absolute;
                 left: 40px;
                 bottom: 30px;
+                transition: all .3s;
                 .title{
                     font-size: 13px;
                     white-space: normal;
@@ -52,6 +53,10 @@
                     color: #D3BC0C;
                     font-size: 15px;
                 }
+            }
+
+            &:hover .product__text{
+                bottom: 70px;
             }
         }
     }
