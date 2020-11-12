@@ -1,0 +1,83 @@
+p, h2, h4, span, a {
+  letter-spacing: 1.5px;
+}
+.product{
+  &__row{
+    display: grid;
+    grid-template-columns: 66.6fr 33.4fr;
+  }
+
+  &__slider{
+    background: #333;
+  }
+
+  &__details{
+    background: #f3f3f3;
+
+  }
+
+  &__title{
+    margin-top: 3.5rem;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-family: 'FuturaPTMedium';
+    font-weight: 500;
+    font-size: 30px;
+    color: $color-gray-dark-3;
+  }
+  &__type{
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  &__rating{
+    font-size: 13px;
+    .stars{
+      color: $color-primary;
+    }
+
+  }
+
+  &__description {
+    margin-bottom: 17px;
+    color: #797979;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  &__price{
+    display: grid;
+    grid-template-columns: 180px 208px;
+    grid-gap: 50px;
+    &--right,
+    &--left{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pay_now,
+    .buy_now{
+      font-size: 14px;
+      color: #000;
+      font-size: bold;
+    }
+
+    .price{
+      font-size: 24px;
+      color: #9b7640;
+      font-weight: bold;
+    }
+
+    .before-discount{
+      text-decoration:line-through;
+      color: #797979;
+    }
+    .after-discount{
+      color: #DF5863;
+    }
+
+    
+  }
+}

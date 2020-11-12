@@ -1,0 +1,22 @@
+.header{
+    border-bottom: 1px solid $color-primary-light;
+    &__section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+        &--list{
+            display: flex;
+
+        }
+    }
+
+
+    &__btn{
+        display: flex;
+    }
+}

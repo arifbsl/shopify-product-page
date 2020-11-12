@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+@font-face {
+  font-family: 'FuturaPTBook';
+  src: url('../../assets/fonts/FuturaPTBook.otf');
+}
+
+
+@font-face {
+  font-family: 'FuturaPTDemi';
+  src: url('../../assets/fonts/FuturaPTDemi.otf');
+}
+
+@font-face {
+  font-family: 'FuturaPTMedium';
+  src: url('../../assets/fonts/FuturaPTMedium.otf');
+}
+
+
+html{
+  // This defines what 1rem is
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.6%
+}
+
+body{
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1616px;
+  padding-left: 5%;
+  padding-right: 5%;
+}

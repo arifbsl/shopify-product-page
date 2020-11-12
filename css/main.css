@@ -1,0 +1,425 @@
+/***
+  MEDIA QUERY MANAGER
+***/
+/*
+   0px -  600px: Phone
+ 600px -  900px: Tablet portrait
+ 900px - 1200px: Tablet landscape
+[1200px-1800px]: is our normal styles apply
+1800px +       : Big Desktop
+*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+/***
+ORDER: Base + typography > general layout + grid > page layout > components 
+**/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'FuturaPTBook';
+  src: url("../../assets/fonts/FuturaPTBook.otf");
+}
+
+@font-face {
+  font-family: 'FuturaPTDemi';
+  src: url("../../assets/fonts/FuturaPTDemi.otf");
+}
+
+@font-face {
+  font-family: 'FuturaPTMedium';
+  src: url("../../assets/fonts/FuturaPTMedium.otf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1616px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body {
+  font-family: "Futura";
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-huge {
+  margin-bottom: 10rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+.benefit p {
+  font-family: 'FuturaPTBook';
+  font-size: 16px;
+  line-height: 24px;
+  color: #212529;
+  padding-bottom: 15px;
+}
+
+.benefit__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .8fr 1fr;
+      grid-template-columns: .8fr 1fr;
+  grid-gap: 50px;
+}
+
+.benefit__left {
+  overflow-y: scroll;
+}
+
+.benefit__title {
+  font-family: 'FuturaPTDemi';
+  font-size: 32px;
+  line-height: 41px;
+  color: #212529;
+}
+
+.benefit__timeline {
+  padding: 10px 20px;
+  overflow-y: scroll;
+}
+
+.benefit__tech {
+  border-left: 1px solid #ededed;
+  padding-left: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.benefit__tech h3 {
+  font-family: 'FuturaPTDemi';
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
+  color: #797979;
+  margin-bottom: 8px;
+}
+
+.benefit__tech h3 .tick-mark {
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: -33px;
+  top: 0;
+}
+
+.benefit__tech h3 .tick-mark span {
+  font-size: 10px;
+  line-height: 1;
+}
+
+.benefit__tech P {
+  font-family: 'FuturaPTBook';
+  font-size: 16px;
+  line-height: 30px;
+  color: #797979;
+  letter-spacing: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.benefit__tech:hover h3,
+.benefit__tech:hover p {
+  color: #212529;
+}
+
+.benefit__tech:hover .tick-mark span {
+  color: #fff;
+}
+
+.benefit__tech:hover .tick-mark {
+  background: #9E7547;
+}
+
+.benefit__right {
+  margin-left: 116px;
+}
+
+.benefit__right img {
+  width: 100%;
+  height: 100%;
+}
+
+.routine {
+  padding: 100px 0;
+}
+
+.routine h3,
+.routine h4 {
+  font-family: 'FuturaPTDemi';
+  color: #212529;
+}
+
+.routine__heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.routine__heading h3 {
+  font-size: 28px;
+}
+
+.routine__heading p {
+  font-family: 'FuturaPTBook';
+  font-size: 16px;
+  color: #212529;
+}
+
+.routine__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.routine__wrapper .product__card {
+  position: relative;
+}
+
+.routine__wrapper .product__card img {
+  width: 100%;
+  background: #F8F8F8;
+}
+
+.routine__wrapper .product__card .product__text {
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+}
+
+.routine__wrapper .product__card .product__text .title {
+  font-size: 13px;
+  white-space: normal;
+  font-weight: 500;
+}
+
+.routine__wrapper .product__card .product__text .price {
+  color: #D3BC0C;
+  font-size: 15px;
+}
+
+.routine .calc {
+  margin: 20px 0;
+  padding: 22px 25px;
+  border: 1px solid #EDEDED !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.routine .calc__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (265px)[3];
+      grid-template-columns: repeat(3, 265px);
+  grid-gap: 30px;
+}
+
+.routine .calc__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid #AF8E69;
+}
+
+.header__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+p, h2, h4, span, a {
+  letter-spacing: 1.5px;
+}
+
+.product__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 66.6fr 33.4fr;
+      grid-template-columns: 66.6fr 33.4fr;
+}
+
+.product__slider {
+  background: #333;
+}
+
+.product__details {
+  background: #f3f3f3;
+}
+
+.product__title {
+  margin-top: 3.5rem;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-family: 'FuturaPTMedium';
+  font-weight: 500;
+  font-size: 30px;
+  color: #3C4043;
+}
+
+.product__type {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.product__rating {
+  font-size: 13px;
+}
+
+.product__rating .stars {
+  color: #8D6929;
+}
+
+.product__description {
+  margin-bottom: 17px;
+  color: #797979;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.product__price {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 180px 208px;
+      grid-template-columns: 180px 208px;
+  grid-gap: 50px;
+}
+
+.product__price--right, .product__price--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product__price .pay_now,
+.product__price .buy_now {
+  font-size: 14px;
+  color: #000;
+  font-size: bold;
+}
+
+.product__price .price {
+  font-size: 24px;
+  color: #9b7640;
+  font-weight: bold;
+}
+
+.product__price .before-discount {
+  text-decoration: line-through;
+  color: #797979;
+}
+
+.product__price .after-discount {
+  color: #DF5863;
+}
+/*# sourceMappingURL=main.css.map */
